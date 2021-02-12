@@ -9,7 +9,7 @@ export const Container = styled.header`
 
 export const Logo = styled.a`
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: bold;
   color: var(--accent);
   cursor: pointer;
@@ -80,6 +80,7 @@ export const NavLink = styled(Link)`
   text-decoration: none;
   text-transform: capitalize;
   font-size: 1.8rem;
+  font-weight: ${({ active }) => (active ? 'bold' : 'regular')};
   color: ${({ active }) => (active ? 'var(--primary)' : 'white')};
   cursor: pointer;
 
@@ -93,7 +94,7 @@ export const NavLink = styled(Link)`
   @media (min-width: 600px) {
     margin: 0;
     padding: 0 1em;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: ${({ active }) => (active ? 'var(--accent)' : 'var(--secondary)')};
 
     &:hover,
