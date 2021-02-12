@@ -27,12 +27,8 @@ Hero.Accent = ({ children, ...restProps }) => {
   return <Accent {...restProps}>{children}</Accent>;
 };
 
-Hero.Button = ({ size = 'm', children, ...restProps }) => {
-  return (
-    <Button size {...restProps}>
-      {children}
-    </Button>
-  );
+Hero.Button = ({ children, ...restProps }) => {
+  return <Button {...restProps}>{children}</Button>;
 };
 
 export default Hero;
