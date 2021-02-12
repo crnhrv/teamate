@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Container = styled.header`
   display: flex;
@@ -72,7 +73,7 @@ export const NavList = styled.ul`
 
 export const NavItem = styled.li``;
 
-export const NavLink = styled.a`
+export const NavLink = styled(Link)`
   display: block;
   padding: 0.6em 1em;
   width: 100%;
