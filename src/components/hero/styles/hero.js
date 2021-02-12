@@ -4,7 +4,7 @@ export const Container = styled.section`
   display: grid;
   place-items: center;
 
-  @media (min-width: 700px) {
+  @media (min-width: 850px) {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -15,7 +15,8 @@ export const Pane = styled.div`
   display: flex;
   flex-direction: column;
   place-items: center;
-  @media (min-width: 700px) {
+
+  @media (min-width: 850px) {
     padding-right: 2em;
   }
 `;
@@ -29,7 +30,12 @@ export const Title = styled.h1`
   font-family: 'Righteous', cursive;
   color: var(--secondary);
 
-  @media (min-width: 700px) {
+  @media (min-width: 850px) {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  @media (min-width: 1000px) {
     margin-left: 3em;
     margin-right: 1em;
   }
@@ -60,4 +66,10 @@ export const Button = styled.button`
   font-weight: bold;
   text-transform: uppercase;
   color: white;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    background-color: #7f3705;
+  }
 `;
