@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { createElement } from 'react';
+
 import { GlobalStyle } from './global_style';
 import { ROUTES } from './constants/routes';
-import { Home } from './pages/home';
 
 function App() {
   return (
@@ -9,13 +10,13 @@ function App() {
       <GlobalStyle />
 
       <Switch>
-        <Route exact path={ROUTES.HOME}>
-          <Home />
-        </Route>
-        <Route path={ROUTES.BROWSE}></Route>
-        <Route path={ROUTES.CART}></Route>
-        <Route path={ROUTES.ABOUT}></Route>
-        <Route path={ROUTES.CONTACT}></Route>
+        {Object.values(ROUTES).map((route) => {
+          return (
+            <Route key={route.path + route.title} exact path={route.path}>
+              {createElement(route.component)}
+            </Route>
+          );
+        })}
       </Switch>
     </Router>
   );

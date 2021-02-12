@@ -1,28 +1,28 @@
 import { useToggle } from '../hooks/use_toggle';
 import { Header } from '../components';
-
+import { ROUTES } from '../constants/routes';
 export const HeaderContainer = ({ active, children, ...restProps }) => {
-  const paths = ['home', 'browse', 'cart', 'about', 'contact'];
-  const [menuOpen, toggleMenuOpen] = useToggle(false);
+  const [isMenuOpen, toggleIsMenuOpen] = useToggle(false);
 
   return (
-    <Header>
+    <Header {...restProps}>
       <Header.Logo>TeaMate</Header.Logo>
       <Header.Navbar>
-        <Header.Hamburger onClick={() => toggleMenuOpen()}></Header.Hamburger>
-        <Header.NavList open={menuOpen}>
-          <Header.Exit onClick={() => toggleMenuOpen()}></Header.Exit>
-          {paths.map((path) => {
+        <Header.Hamburger onClick={toggleIsMenuOpen}></Header.Hamburger>
+        <Header.NavList open={isMenuOpen}>
+          <Header.Exit onClick={toggleIsMenuOpen}></Header.Exit>
+          {Object.values(ROUTES).map((route) => {
             return (
-              <Header.NavItem key={path}>
-                <Header.NavLink active={active === path} to={path}>
-                  {path}
+              <Header.NavItem key={route.title + route.path}>
+                <Header.NavLink active={active === route.title} to={route.path}>
+                  {route.title}
                 </Header.NavLink>
               </Header.NavItem>
             );
           })}
         </Header.NavList>
       </Header.Navbar>
+      {children}
     </Header>
   );
 };
