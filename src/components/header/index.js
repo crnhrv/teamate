@@ -31,7 +31,7 @@ Header.NavItem = ({ children, ...restProps }) => {
 
 Header.NavLink = ({ active, children, ...restProps }) => {
   return (
-    <NavLink active={active} {...restProps}>
+    <NavLink active={active ? 1 : 0} {...restProps}>
       {children}
     </NavLink>
   );
