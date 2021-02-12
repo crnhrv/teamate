@@ -1,5 +1,6 @@
 import { HeaderContainer } from '../containers/header';
 import { ROUTES } from '../constants/routes';
+import { Link } from 'react-router-dom';
 import { Background, Hero } from '../components';
 import backgroundImg from '../img/tea-leaf.png';
 
@@ -17,7 +18,9 @@ export const Home = () => {
         </Hero.Title>
         <Hero.Pane>
           <Hero.Subtitle>Find your brew today.</Hero.Subtitle>
-          <Hero.Button>browse</Hero.Button>
+          <Link to={ROUTES.BROWSE.path}>
+            <Hero.Button>browse</Hero.Button>
+          </Link>
         </Hero.Pane>
         <Hero.Pane></Hero.Pane>
         <Hero.Pane></Hero.Pane>
