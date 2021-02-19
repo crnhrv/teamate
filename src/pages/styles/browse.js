@@ -17,4 +17,8 @@ export const BrowsePageWrapper = styled.div`
       '... title'
       'sidebar card';
   }
+
+  @media (min-width: 2000px) {
+    width: 1400px;
+  }
 `;
