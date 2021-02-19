@@ -99,3 +99,5 @@ export const TEAS = {
     img: shoumei,
   },
 };
+
+export const TEA_TYPES = ['black', 'green', 'oolong', 'white', 'herbal'];
