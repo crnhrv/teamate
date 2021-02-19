@@ -13,11 +13,16 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html {
+    height: 100%;
+  }
+
   body {
-    background-image: linear-gradient(176.73deg, #b0dfc8 60.43%, #41af79 101.81%);
-    background-repeat: no-repeat;
-    height: 100vh;
+    background-image: linear-gradient(196.73deg, #b0dfc8 60.43%, #41af79 101.81%);
+    height: 100%;
     margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: 'Roboto', sans-serif;
   }
 `;
