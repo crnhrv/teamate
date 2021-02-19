@@ -32,7 +32,12 @@ export const Item = styled.p`
   font-size: 1.2rem;
   color: ${({ active }) => (active ? 'var(--accent)' : 'var(--secondary)')};
   font-weight: ${({ active }) => (active ? 'bold' : 'regular')};
+  text-transform: capitalize;
   cursor: pointer;
+
+  &:hover {
+    color: ${({ active }) => (active ? 'var(--accent)' : 'var(--hover)')};
+  }
 
   @media (min-width: 700px) {
     font-size: 2rem;
