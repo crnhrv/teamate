@@ -1,4 +1,4 @@
-# TeaMate
+# TeaMate (WIP)
 
 React project using styled components (CSS-in-JS) utilizing the compound component architecture pattern.
 
