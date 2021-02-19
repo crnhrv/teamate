@@ -1,6 +1,7 @@
 import { useToggle } from '../hooks/use_toggle';
 import { Header } from '../components';
 import { ROUTES } from '../constants/routes';
+
 export const HeaderContainer = ({ active, children, ...restProps }) => {
   const [isMenuOpen, toggleIsMenuOpen] = useToggle(false);
 

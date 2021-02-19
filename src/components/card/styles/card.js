@@ -12,14 +12,13 @@ export const Group = styled.div`
   grid-area: card;
   display: grid;
   gap: 1em;
-  place-content: center;
-  max-width: 150px;
+  max-width: 200px;
   margin: 0 auto;
 
   @media (min-width: 700px) {
     grid-template-columns: repeat(auto-fit, minmax(0px, 100px));
-    place-items: center;
     margin: unset;
+    margin-left: 2em;
     gap: 3em;
     max-width: 1200px;
   }
@@ -27,23 +26,18 @@ export const Group = styled.div`
   @media (min-width: 800px) {
     grid-template-columns: repeat(auto-fit, minmax(0px, 200px));
   }
-
-  @media (min-width: 1400px) {
-    place-self: center;
-  }
 `;
 
 export const Header = styled.h2`
-  align-self: start;
+  align-self: center;
   margin: 0;
-  margin-top: 0.2em;
-  margin-left: 0.7rem;
+  margin-top: 0.5em;
+  color: var(--secondary);
 `;
 
 export const Text = styled.p`
-  align-self: start;
+  align-self: center;
   margin-top: 0;
-  margin-left: 0.7rem;
   margin-bottom: 2em;
   color: var(--accent);
   font-weight: bold;

@@ -100,8 +100,7 @@ export const NavLink = styled(Link)`
     &:hover,
     &:focus {
       color: rgba(255, 255, 255, 0.733);
-      color: ${({ active }) =>
-        active ? 'var(--accent)' : 'rgba(255, 255, 255, 0.733)'};
+      color: ${({ active }) => (active ? 'var(--accent)' : 'var(--hover)')};
     }
   }
 `;

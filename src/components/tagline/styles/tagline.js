@@ -8,8 +8,9 @@ export const Title = styled.h1`
   color: var(--secondary);
 
   @media (min-width: 900px) {
+    margin-left: 1em;
     font-size: 3rem;
-    text-align: center;
+    text-align: left;
   }
 `;
 

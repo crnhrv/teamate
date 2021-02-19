@@ -5,6 +5,7 @@ export const GlobalStyle = createGlobalStyle`
     --primary: #b0dfc8;
     --secondary: #055726;
     --accent: #8a4f26;
+    --hover: #f3f3f3
   }
 
   *,
