@@ -21,16 +21,16 @@ export const HEADER_ROUTES = {
     title: 'cart',
     component: Cart,
   },
-  ABOUT: {
-    path: '/about',
-    title: 'about',
-    component: About,
-  },
-  CONTACT: {
-    path: '/contact',
-    title: 'contact',
-    component: Contact,
-  },
+  // ABOUT: {
+  //   path: '/about',
+  //   title: 'about',
+  //   component: About,
+  // },
+  // CONTACT: {
+  //   path: '/contact',
+  //   title: 'contact',
+  //   component: Contact,
+  // },
 };
 
 export const PRODUCT_ROUTE = {
