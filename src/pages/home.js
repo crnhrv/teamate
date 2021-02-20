@@ -1,5 +1,5 @@
 import { HeaderContainer } from '../containers/header';
-import { ROUTES } from '../constants/routes';
+import { HEADER_ROUTES } from '../constants/routes';
 import { Link } from 'react-router-dom';
 import { Background, Hero } from '../components';
 import backgroundImg from '../img/tea-leaf.png';
@@ -7,7 +7,7 @@ import backgroundImg from '../img/tea-leaf.png';
 export const Home = () => {
   return (
     <>
-      <HeaderContainer active={ROUTES.HOME.title} />
+      <HeaderContainer active={HEADER_ROUTES.HOME.title} />
       <Hero>
         <Hero.Title>
           The
@@ -18,7 +18,7 @@ export const Home = () => {
         </Hero.Title>
         <Hero.Pane>
           <Hero.Subtitle>Find your brew today.</Hero.Subtitle>
-          <Link to={ROUTES.BROWSE.path}>
+          <Link to={HEADER_ROUTES.BROWSE.path}>
             <Hero.Button>browse</Hero.Button>
           </Link>
         </Hero.Pane>
