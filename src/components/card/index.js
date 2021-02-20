@@ -2,12 +2,14 @@ import {
   Container,
   Group,
   Pane,
+  CartPane,
   Section,
   Header,
   Text,
   Accent,
   Image,
   Button,
+  Input,
 } from './styles/card';
 
 const Card = ({ children, ...restProps }) => {
@@ -20,6 +22,10 @@ Card.Group = ({ children, ...restProps }) => {
 
 Card.Pane = ({ children, ...restProps }) => {
   return <Pane {...restProps}>{children}</Pane>;
+};
+
+Card.CartPane = ({ children, ...restProps }) => {
+  return <CartPane {...restProps}>{children}</CartPane>;
 };
 
 Card.Section = ({ children, ...restProps }) => {
@@ -44,6 +50,10 @@ Card.Image = ({ src, alt, ...restProps }) => {
 
 Card.Button = ({ children, ...restProps }) => {
   return <Button {...restProps}>{children}</Button>;
+};
+
+Card.Input = ({ children, ...restProps }) => {
+  return <Input {...restProps}>{children}</Input>;
 };
 
 export default Card;
