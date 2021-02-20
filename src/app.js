@@ -6,10 +6,18 @@ import { CartContext } from './contexts/cart_context';
 import { useCart } from './hooks/use_cart';
 
 function App() {
-  const { addToCart, removeFromCart, cartItems } = useCart();
+  const {
+    addToCart,
+    removeFromCart,
+    cartItems,
+    checkingOut,
+    checkOut,
+  } = useCart();
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart }}>
+    <CartContext.Provider
+      value={{ cartItems, addToCart, removeFromCart, checkingOut, checkOut }}
+    >
       <Router>
         <GlobalStyle />
 
