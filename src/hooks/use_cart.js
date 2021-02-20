@@ -2,23 +2,24 @@ import { useState } from 'react';
 
 export const useCart = () => {
   const [cartItems, setCartItems] = useState([]);
+  const [checkingOut, setCheckingOut] = useState(false);
 
-  const addToCart = (newItem) => {
+  const addToCart = (newItem, amount) => {
     const oldItem = getItem(newItem.id);
     if (oldItem) {
-      changeItemCount(oldItem);
+      changeItemCount(oldItem, amount);
     } else {
       setCartItems((oldCart) => [...oldCart, { ...newItem, count: 1 }]);
     }
     return;
   };
 
-  const removeFromCart = (id) => {
-    const oldItem = getItem(id);
-    if (oldItem.count > 1) {
-      changeItemCount(oldItem, -1);
+  const removeFromCart = (item, amount) => {
+    const oldItem = getItem(item.id);
+    if (oldItem.count - amount > 0) {
+      changeItemCount(oldItem, -amount);
     } else {
-      const items = cartItems.filter((item) => item.id !== id);
+      const items = cartItems.filter((item) => item.id !== oldItem.id);
       setCartItems(items);
     }
   };
@@ -35,5 +36,13 @@ export const useCart = () => {
     setCartItems([...otherItems, tempNew]);
   };
 
-  return { cartItems, removeFromCart, addToCart };
+  const checkOut = () => {
+    setCheckingOut(true);
+    setTimeout(() => {
+      setCartItems([]);
+      setCheckingOut(false);
+    }, 1000);
+  };
+
+  return { cartItems, removeFromCart, addToCart, checkingOut, checkOut };
 };
