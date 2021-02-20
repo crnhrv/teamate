@@ -3,8 +3,9 @@ import { Browse } from '../pages/browse';
 import { Cart } from '../pages/cart';
 import { Contact } from '../pages/contact';
 import { Home } from '../pages/home';
+import { Product } from '../pages/product';
 
-export const ROUTES = {
+export const HEADER_ROUTES = {
   HOME: {
     path: '/',
     title: 'home',
@@ -30,4 +31,9 @@ export const ROUTES = {
     title: 'contact',
     component: Contact,
   },
+};
+
+export const PRODUCT_ROUTE = {
+  path: '/product/:id',
+  component: Product,
 };
