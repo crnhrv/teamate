@@ -87,9 +87,9 @@ export const NavLink = styled(Link)`
 
   &:hover,
   &:focus {
-    background-color: var(--primary);
-    color: var(--secondary);
-    color: ${({ active }) => (active ? 'initial' : 'var(--primary)')};
+    background-color: ${({ active }) =>
+      active ? 'initial' : 'var(--primary)'};
+    color: ${({ active }) => (active ? 'var(--primary)' : 'var(--secondary)')};
   }
 
   @media (min-width: 600px) {
@@ -109,16 +109,23 @@ export const NavLink = styled(Link)`
 export const Notification = styled.div`
   display: ${({ amount }) => (amount ? 'block' : 'none')};
   position: absolute;
-  right: 5px;
-  bottom: 10px;
   z-index: 1;
-  background-color: rgba(100, 100, 100, 0.1);
+  right: 85px;
+  bottom: 40px;
+  background-color: rgba(100, 100, 100, 0.7);
   border-radius: 5px;
   padding: 3px;
   width: 24px;
   height: 24px;
   text-align: center;
   font-size: 1rem;
-  color: black;
+  color: white;
   font-weight: bold;
+
+  @media (min-width: 600px) {
+    right: 5px;
+    bottom: 10px;
+    color: black;
+    background-color: rgba(100, 100, 100, 0.15);
+  }
 `;
