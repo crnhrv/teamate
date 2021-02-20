@@ -2,9 +2,12 @@ import { Card, Sidebar } from '../components';
 import { useFilter } from '../hooks/use_filter';
 import { TEA_TYPES } from '../constants/teas';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { CartContext } from '../contexts/cart_context';
 
 export const BrowseContainer = () => {
   const { teaData, filter, setFilter } = useFilter();
+  const { addToCart } = useContext(CartContext);
 
   return (
     <>
@@ -31,7 +34,9 @@ export const BrowseContainer = () => {
                 <Card.Header>{tea.name}</Card.Header>
                 <Card.Text>£{tea.price}</Card.Text>
               </Link>
-              <Card.Button>Add to Cart</Card.Button>
+              <Card.Button onClick={() => addToCart(tea)}>
+                Add to Cart
+              </Card.Button>
             </Card>
           );
         })}

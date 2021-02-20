@@ -3,11 +3,14 @@ import { useParams, useHistory } from 'react-router-dom';
 import { HEADER_ROUTES } from '../constants/routes';
 import { Card } from '../components';
 import { TEAS } from '../constants/teas';
+import { useContext } from 'react';
+import { CartContext } from '../contexts/cart_context';
 
 export const Product = (props) => {
   const { id } = useParams();
   const { goBack } = useHistory();
   const tea = Object.values(TEAS).find((tea) => tea.id === Number(id));
+  const { addToCart } = useContext(CartContext);
 
   return (
     <>
@@ -15,7 +18,7 @@ export const Product = (props) => {
       <Card.Pane>
         <Card.Section>
           <Card.Button onClick={goBack}>Back</Card.Button>
-          <Card.Button>Add to Cart</Card.Button>
+          <Card.Button onClick={() => addToCart(tea)}>Add to Cart</Card.Button>
         </Card.Section>
         <Card.Header>
           {tea.name} - <Card.Accent>£{tea.price}</Card.Accent>

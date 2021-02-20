@@ -74,6 +74,7 @@ export const NavList = styled.ul`
 export const NavItem = styled.li``;
 
 export const NavLink = styled(Link)`
+  position: relative;
   display: block;
   padding: 0.6em 1em;
   width: 100%;
@@ -103,4 +104,21 @@ export const NavLink = styled(Link)`
       color: ${({ active }) => (active ? 'var(--accent)' : 'var(--hover)')};
     }
   }
+`;
+
+export const Notification = styled.div`
+  display: ${({ amount }) => (amount ? 'block' : 'none')};
+  position: absolute;
+  right: 5px;
+  bottom: 10px;
+  z-index: 1;
+  background-color: rgba(100, 100, 100, 0.1);
+  border-radius: 5px;
+  padding: 3px;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  font-size: 1rem;
+  color: black;
+  font-weight: bold;
 `;

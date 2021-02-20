@@ -2,6 +2,7 @@ import {
   Container,
   Navbar,
   NavItem,
+  Notification,
   NavLink,
   NavList,
   Hamburger,
@@ -101,6 +102,10 @@ Header.Exit = ({ open, onClick }) => {
 
 Header.Logo = ({ children, ...restProps }) => {
   return <Logo {...restProps}>{children}</Logo>;
+};
+
+Header.Notification = ({ amount }) => {
+  return <Notification amount={amount}>{amount}</Notification>;
 };
 
 export default Header;
