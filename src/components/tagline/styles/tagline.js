@@ -8,13 +8,17 @@ export const Title = styled.h1`
   color: var(--secondary);
 
   @media (min-width: 900px) {
-    margin-left: 1em;
+    margin: ${({ margin }) => margin};
     font-size: 3rem;
-    text-align: left;
+    text-align: ${({ align }) => align};
   }
 `;
 
-export const Subtitle = styled.p``;
+export const Subtitle = styled.p`
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 0;
+`;
 
 export const Accent = styled.span`
   color: var(--accent);

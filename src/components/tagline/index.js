@@ -4,7 +4,7 @@ const Tagline = ({ children, ...restProps }) => {
   return <Title {...restProps}>{children}</Title>;
 };
 
-Tagline.Subheading = ({ children, ...restProps }) => {
+Tagline.Subtitle = ({ children, ...restProps }) => {
   return <Subtitle {...restProps}>{children}</Subtitle>;
 };
 

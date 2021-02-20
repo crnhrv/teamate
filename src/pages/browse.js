@@ -9,7 +9,7 @@ export const Browse = () => {
     <>
       <HeaderContainer active={HEADER_ROUTES.BROWSE.title} />
       <BrowsePageWrapper>
-        <Tagline>
+        <Tagline margin={'1em 0 0 1em'} align="left">
           Who's Your <Tagline.Accent>TeaMate</Tagline.Accent>?
         </Tagline>
         <BrowseContainer />

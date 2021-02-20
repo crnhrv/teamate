@@ -15,7 +15,7 @@ export const Product = (props) => {
   return (
     <>
       <HeaderContainer active={HEADER_ROUTES.BROWSE.title} />
-      <Card.Pane>
+      <Card.Pane dir="column">
         <Card.Section>
           <Card.Button onClick={goBack}>Back</Card.Button>
           <Card.Button onClick={() => addToCart(tea)}>Add to Cart</Card.Button>

@@ -25,7 +25,7 @@ export const BrowseContainer = () => {
           );
         })}
       </Sidebar>
-      <Card.Group>
+      <Card.Group width={200} max={200} margin={'0 0 0 2em'}>
         {teaData.map((tea) => {
           return (
             <Card key={tea.id}>
